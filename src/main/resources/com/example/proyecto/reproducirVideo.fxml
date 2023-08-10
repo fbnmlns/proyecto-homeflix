@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ReproducirVideoVista">
+   <center>
+      <HBox fx:id="hboxPrincipal" prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vboxPrincipal" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0">
+               <children>
+                  <MediaView fx:id="mediaVideo" fitHeight="200.0" fitWidth="200.0" />
+                  <Slider fx:id="progresBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="900.0" />
+                  <HBox prefHeight="75.0" prefWidth="960.0">
+                     <children>
+                        <Button fx:id="btnReproducir" mnemonicParsing="false" onAction="#handleButtonReproducir" prefHeight="26.0" prefWidth="51.0" style="-fx-background-color: Black;" text="Play" textFill="#fffdfd">
+                           <HBox.margin>
+                              <Insets left="100.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#handleButtonVolver" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: Black;" text="Volver" textFill="#faf6f6">
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnPausar" mnemonicParsing="false" onAction="#handleButtonPausar" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: black;" text="Pause" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnParar" mnemonicParsing="false" onAction="#handleButtonParar" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: black;" text="□" textFill="#fff9f9">
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#handleButtonBorrar" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: black;" text="Borrar" textFill="#f3f0f0">
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#handleButtonModificar" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: black;" text="Actualizar" textFill="#f3ecec">
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Slider fx:id="volumSlider" prefHeight="27.0" prefWidth="87.0">
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="12.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets right="5.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Slider>
+                        <ImageView fx:id="fullScreen" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/fullscreen.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ToggleButton fx:id="btnLike" mnemonicParsing="false" onAction="#handleDarleLike" prefHeight="21.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fx:id="heart" fitHeight="27.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/heart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="5.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <Label fx:id="liked" prefHeight="12.0" prefWidth="48.0">
+                           <padding>
+                              <Insets left="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="addReproductionList" fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/add2.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="labelTime" prefHeight="20.0" prefWidth="83.0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnHost" mnemonicParsing="false" onAction="#handleButtonAbrirConexion" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: black;" text="Host" textFill="#fff6f6">
+                           <HBox.margin>
+                              <Insets left="14.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollPane fx:id="scrollPanePlayList" prefHeight="700.0" prefWidth="170.0" visible="false" BorderPane.alignment="TOP_LEFT">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="150.0">
+                     <children>
+                        <VBox fx:id="vBoxVideos" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </center>
+
+</BorderPane>

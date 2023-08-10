@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.modificarUsuario">
+    <left>
+        <AnchorPane prefHeight="600.0" prefWidth="1003.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="txtApellido" layoutX="284.0" layoutY="236.0" prefHeight="32.0" prefWidth="222.0" />
+                <TextField fx:id="txtNombreUsuario" layoutX="284.0" layoutY="399.0" prefHeight="32.0" prefWidth="222.0" />
+                <TextField fx:id="txtArchivoImagen" layoutX="284.0" layoutY="506.0" prefHeight="32.0" prefWidth="222.0" />
+                <TextField fx:id="txtNombre" layoutX="284.0" layoutY="161.0" prefHeight="32.0" prefWidth="222.0" />
+                <Button fx:id="btnSubirArchivoImagen" layoutX="505.0" layoutY="506.0" mnemonicParsing="false" onAction="#handleButtonSubirArchivoImagen" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: black;" text=". . ." textFill="#fffdfd" />
+                <Button fx:id="btnRegistrarUsuario" layoutX="288.0" layoutY="595.0" mnemonicParsing="false" onAction="#handleButtonModificarUsuario" prefWidth="100.0" style="-fx-background-color: black;" text="Modificar" textFill="#f5f2f2" />
+                <Button fx:id="btnCancelarRegistro" layoutX="402.0" layoutY="595.0" mnemonicParsing="false" onAction="#handleButtonCancelar" prefWidth="100.0" style="-fx-background-color: black;" text="Cancelar" textFill="#f2f0f0" />
+                <Label layoutX="286.0" layoutY="135.0" prefHeight="30.0" prefWidth="79.0" text="Nombre">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="287.0" layoutY="209.0" prefHeight="30.0" prefWidth="88.0" text="Apellido">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="284.0" layoutY="370.0" prefHeight="31.0" prefWidth="208.0" text="Nombre de usuario ">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="287.0" layoutY="282.0" prefHeight="30.0" prefWidth="144.0" text="Contraseña">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label layoutX="288.0" layoutY="474.0" prefHeight="30.0" prefWidth="180.0" text="Foto de perfil">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="-3.0" prefHeight="100.0" prefWidth="1110.0" style="-fx-background-color: black;">
+                    <children>
+                        <Label layoutX="244.0" layoutY="21.0" prefHeight="53.0" prefWidth="290.0" text="Modificar Cuenta" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="31.0" />
+                            </font>
+                        </Label>
+                  <Circle fx:id="userPhoto" fill="DODGERBLUE" layoutX="777.0" layoutY="46.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="userName" layoutX="833.0" layoutY="37.0" prefHeight="17.0" prefWidth="112.0" text="Label" />
+                  <ImageView fx:id="back" fitHeight="62.0" fitWidth="76.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/back.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+                <PasswordField fx:id="txtContrasenna" layoutX="284.0" layoutY="308.0" prefHeight="32.0" prefWidth="222.0" />
+                <Label fx:id="labelWeakPassword" layoutX="411.0" layoutY="255.0" prefHeight="104.0" prefWidth="190.0" textFill="RED">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelUserExists" layoutX="190.0" layoutY="416.0" prefHeight="17.0" prefWidth="214.0" textFill="RED">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="730.0" layoutY="95.0" prefHeight="612.0" prefWidth="372.0" style="-fx-background-color: black;">
+                    <children>
+                        <ImageView fitHeight="164.0" fitWidth="229.0" layoutX="102.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/homeFlixLogo.jpeg" />
+                            </image>
+                        </ImageView>
+                  <Button fx:id="btnDelete" layoutX="133.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleButtonDeleteAccount" style="-fx-background-color: white;" text="Eliminar Cuenta" textFill="#070707" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  local_mysql:
+    image: mysql/mysql-server
+    restart: always
+    environment:
+      MYSQL_USER: 'appuser'
+      MYSQL_PASSWORD: 'appuser'
+      MYSQL_DATABASE: 'homeflix'
+      MYSQL_ROOT_PASSWORD: 'JaAch060896'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '33097:3306'
+    expose:
+      - '3306'

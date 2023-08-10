@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.PaginaPrincipalVista">
+   <center>
+      <AnchorPane prefHeight="621.0" prefWidth="783.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane layoutX="20.0" layoutY="165.0" prefHeight="200.0" prefWidth="1050.0">
+               <content>
+
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0">
+                     <children>
+                        <HBox fx:id="hBoxVideos" prefHeight="150.0" />
+                     </children>
+                  </AnchorPane>
+
+               </content>
+            </ScrollPane>
+            <AnchorPane fx:id="anchorPainMain" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: black;">
+               <children>
+                  <Circle fx:id="circlePhoto" fill="DODGERBLUE" layoutX="918.0" layoutY="48.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="labelUserName" layoutX="963.0" layoutY="41.0" prefHeight="18.0" prefWidth="123.0" text="Label" textFill="#e4d3d3" />
+                  <TextField fx:id="txtBuscar" layoutX="257.0" layoutY="35.0" prefHeight="26.0" prefWidth="327.0" style="-fx-background-color: white;" />
+                  <ImageView fx:id="search" fitHeight="30.0" fitWidth="28.0" layoutX="599.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/search.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="trash" fitHeight="30.0" fitWidth="28.0" layoutX="640.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="640.0">
+                     <image>
+                        <Image url="@img/trash.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="exit" fitHeight="40.0" fitWidth="50.0" layoutX="25.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/exit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="add" fitHeight="30.0" fitWidth="28.0" layoutX="94.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/add.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ScrollPane layoutX="20.0" layoutY="451.0" prefHeight="210.0" prefWidth="1050.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0">
+                     <children>
+                        <HBox fx:id="idHboxLista" layoutY="5.0" prefHeight="150.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label layoutX="20.0" layoutY="413.0" prefHeight="18.0" prefWidth="378.0" text="PlayList">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultadoBusqueda" layoutX="20.0" layoutY="127.0" prefHeight="38.0" prefWidth="711.0" text="Videos Recientes">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

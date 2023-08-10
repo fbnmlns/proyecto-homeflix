@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.RegistroUsuarioVista">
+   <left>
+      <AnchorPane prefHeight="900.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtApellido" layoutX="302.0" layoutY="276.0" prefHeight="32.0" prefWidth="222.0" />
+            <TextField fx:id="txtNombreUsuario" layoutX="302.0" layoutY="439.0" prefHeight="32.0" prefWidth="222.0" />
+            <TextField fx:id="txtArchivoImagen" layoutX="302.0" layoutY="546.0" prefHeight="32.0" prefWidth="222.0" />
+            <TextField fx:id="txtNombre" layoutX="302.0" layoutY="201.0" prefHeight="32.0" prefWidth="222.0" />
+            <Button fx:id="btnSubirArchivoImagen" layoutX="523.0" layoutY="546.0" mnemonicParsing="false" onAction="#handleButtonSubirArchivoImagen" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: black;" text=". . ." textFill="#fffdfd" />
+            <Button fx:id="btnRegistrarUsuario" layoutX="306.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleButtonRegistrarUsuario" prefWidth="100.0" style="-fx-background-color: black;" text="Registrar" textFill="#f5f2f2" />
+            <Button fx:id="btnCancelarRegistro" layoutX="420.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleButtonCancelarRegsitro" prefWidth="100.0" style="-fx-background-color: black;" text="Cancelar" textFill="#f2f0f0" />
+            <Label layoutX="304.0" layoutY="175.0" prefHeight="30.0" prefWidth="79.0" text="Nombre">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="249.0" prefHeight="30.0" prefWidth="88.0" text="Apellido">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="302.0" layoutY="410.0" prefHeight="31.0" prefWidth="208.0" text="Nombre de usuario ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="322.0" prefHeight="30.0" prefWidth="144.0" text="Contraseña">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="306.0" layoutY="514.0" prefHeight="30.0" prefWidth="180.0" text="Foto de perfil">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-3.0" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="433.0" layoutY="21.0" prefHeight="53.0" prefWidth="128.0" text="Registro" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <PasswordField fx:id="txtContrasenna" layoutX="302.0" layoutY="348.0" prefHeight="32.0" prefWidth="222.0" />
+            <Label fx:id="labelWeakPassword" layoutX="357.0" layoutY="255.0" prefHeight="104.0" prefWidth="190.0" textFill="RED">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelUserExists" layoutX="190.0" layoutY="391.0" prefHeight="17.0" prefWidth="214.0" textFill="RED">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="729.0" layoutY="-41.0" prefHeight="741.0" prefWidth="374.0" style="-fx-background-color: black;">
+               <children>
+                  <ImageView fitHeight="164.0" fitWidth="220.0" layoutX="106.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/homeFlixLogo.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
